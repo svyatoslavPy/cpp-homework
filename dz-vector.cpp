@@ -4,12 +4,12 @@ using namespace std;
 
 
 // homework :)
-auto FillZeroes(int width, int height) {
+auto FillZeroes(int column, int row) {
     vector<vector<int>> VECTOR;
 
-    for (int i = 0; i < height; i++) {
+    for (int i = 0; i < row; i++) {
         vector<int> v_vectore;
-        for (int j = 0; j < width; j++) {
+        for (int j = 0; j < column; j++) {
             v_vectore.push_back(0);
         }
         VECTOR.push_back(v_vectore);
@@ -18,15 +18,15 @@ auto FillZeroes(int width, int height) {
 }
 
 
-auto FillCin(int width, int height) {
+auto FillCin(int column, int row) {
     
     vector<vector<int>> VECTOR;
 
-    for (int i = 0; i < height; i++) {
+    for (int i = 0; i < row; i++) {
         
         vector<int> v_vectore;
         
-        for (int j = 0; j < width; j++) {
+        for (int j = 0; j < column; j++) {
             int client;
             cin >> client;
             
@@ -38,13 +38,13 @@ auto FillCin(int width, int height) {
 }
 
 
-int Summa(vector<vector<int>> VECTOR, int width, int height) {
+int Summa(vector<vector<int>> VECTOR, int column, int row) {
     
     int Summa = 0;
 
-    for (int i = 0; i < height; i++) {
+    for (int i = 0; i < row; i++) {
         
-        for (int j = 0; j < width; j++) {
+        for (int j = 0; j < column; j++) {
             
             Summa += VECTOR[i][j];
         }
@@ -53,12 +53,12 @@ int Summa(vector<vector<int>> VECTOR, int width, int height) {
 }
 
 
-int Minimum(vector<vector<int>> VECTOR, int width, int height) {
+int Minimum(vector<vector<int>> VECTOR, int column, int row) {
     int Minimum = -1;
 
-    for (int i = 0; i < height; i++) {
+    for (int i = 0; i < row; i++) {
         
-        for (int j = 0; j < width; j++) {
+        for (int j = 0; j < column; j++) {
             
             if (VECTOR[i][j] < Minimum)
                 Minimum = VECTOR[i][j];
@@ -68,12 +68,12 @@ int Minimum(vector<vector<int>> VECTOR, int width, int height) {
 }
 
 
-int Max(vector<vector<int>> VECTOR, int width, int height) {
+int Max(vector<vector<int>> VECTOR, int column, int row) {
     
     int Max = 1;
 
-    for (int i = 0; i < height; i++) {
-        for (int j = 0; y < width; j++) {
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; y < column; j++) {
             
             if (VECTOR[i][y] > Max) {
                 
@@ -86,14 +86,15 @@ int Max(vector<vector<int>> VECTOR, int width, int height) {
 }
 
 
-int Average(vector<vector<int>> VECTOR, int width, int height) {
+int Average(vector<vector<int>> VECTOR, int column, int row) {
     
     int count = 0; 
     sum = 0;
 
-    for (int i = 0; i < height; i++) {
+    for (int i = 0; i < row; i++) {
         
-        for (int j = 0; j < width; j++) {
+        for (int j = 0; j < column; j++) {
+            
             count++;
             sum += VECTOR[i][j];
         }
@@ -103,11 +104,10 @@ int Average(vector<vector<int>> VECTOR, int width, int height) {
 }
 
 
-void Showing_Elements(vector<vector<int>> VECTOR, int width, int height) {
+void Showing_Elements(vector<vector<int>> VECTOR, int column, int row) {
     
-    for (int i = 0; i < height; i++)
-    {
-        for (int y = 0; y < width; y++) {
+    for (int i = 0; i < row; i++) {
+        for (int y = 0; y < column; y++) {
             cout << VECTOR[i][y] << " ";
         }
         cout << endl;
