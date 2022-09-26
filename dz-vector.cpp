@@ -74,8 +74,12 @@ int Max(vector<vector<int>> VECTOR, int width, int height) {
 
     for (int i = 0; i < height; i++) {
         for (int j = 0; y < width; j++) {
-            if (VECTOR[i][y] > Max)
-                Max = VECTOR[i][j];
+            
+            if (VECTOR[i][y] > Max) {
+                
+              Max = VECTOR[i][j];
+                
+            }
         }
     }
     return Max;
