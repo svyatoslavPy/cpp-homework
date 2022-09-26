@@ -60,8 +60,8 @@ int Minimum(vector<vector<int>> VECTOR, int width, int height) {
         
         for (int j = 0; j < width; j++) {
             
-            if (VECTOR[i][y] < Minimum)
-                Minimum = VECTOR[i][y];
+            if (VECTOR[i][j] < Minimum)
+                Minimum = VECTOR[i][j];
         }
     }
     return Minimum;
@@ -69,6 +69,7 @@ int Minimum(vector<vector<int>> VECTOR, int width, int height) {
 
 
 int Max(vector<vector<int>> VECTOR, int width, int height) {
+    
     int Max = 1;
 
     for (int i = 0; i < height; i++) {
@@ -83,7 +84,8 @@ int Max(vector<vector<int>> VECTOR, int width, int height) {
 
 int Average(vector<vector<int>> VECTOR, int width, int height) {
     
-    int count = 0, sum = 0, result;
+    int count = 0; 
+    sum = 0;
 
     for (int i = 0; i < height; i++) {
         
@@ -92,7 +94,7 @@ int Average(vector<vector<int>> VECTOR, int width, int height) {
             sum += VECTOR[i][j];
         }
     }
-    result = sum / count;
+    int result = sum / count;
     return result;
 }
 
@@ -109,8 +111,7 @@ void Showing_Elements(vector<vector<int>> VECTOR, int width, int height) {
 }
 
 
-int main()
-{
+int main() {
   
     // Task 1
     vector<vector<int>> VECTOR;
