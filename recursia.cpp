@@ -9,5 +9,5 @@ void recursion(int x) {
 }
 
 int main() {
-    recursion(10);
+    recursion(5);
 }
